@@ -1,0 +1,160 @@
+﻿<Window x:Class="WPF_Button_Animation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Button_Animation"
+        mc:Ignorable="d" 
+        Title="Button Animation" Height="450" Width="800" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard SpeedRatio="1.5">
+                        <DoubleAnimation Storyboard.TargetName="ButtonA"
+                                Storyboard.TargetProperty="Opacity"
+                                From="0.0" To="1" Duration="0:0:2.5" BeginTime="00:00:2"></DoubleAnimation>
+
+                        <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="ButtonA" Storyboard.TargetProperty="Margin" BeginTime="00:00:2">
+                            <SplineThicknessKeyFrame KeyTime="00:00:00"  Value="{Binding ElementName=ButtonA, Path=Margin}"/>
+                            <SplineThicknessKeyFrame KeyTime="0:0:2.5" Value="100, 0, 0, 0"/>
+                        </ThicknessAnimationUsingKeyFrames>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard SpeedRatio="1.5">
+                        <DoubleAnimation Storyboard.TargetName="ButtonB"
+                                Storyboard.TargetProperty="Opacity"
+                                From="0.0" To="1" Duration="0:0:2.5" BeginTime="00:00:2"></DoubleAnimation>
+
+                        <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="ButtonB" Storyboard.TargetProperty="Margin" BeginTime="00:00:2">
+                            <SplineThicknessKeyFrame KeyTime="00:00:00"  Value="{Binding ElementName=ButtonB, Path=Margin}"/>
+                            <SplineThicknessKeyFrame KeyTime="0:0:2.5" Value="0, 0, 100, 0"/>
+                        </ThicknessAnimationUsingKeyFrames>
+
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+
+
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard SpeedRatio="1.5">
+                        <DoubleAnimation Storyboard.TargetName="ButtonC"
+                                Storyboard.TargetProperty="Opacity"
+                                From="0.0" To="1" Duration="0:0:2.5" BeginTime="00:00:2"></DoubleAnimation>
+
+                        <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="ButtonC" Storyboard.TargetProperty="Margin" BeginTime="00:00:2">
+                            <SplineThicknessKeyFrame KeyTime="00:00:00"  Value="{Binding ElementName=ButtonC, Path=Margin}"/>
+                            <SplineThicknessKeyFrame KeyTime="0:0:2.5" Value="0, 0, 0, 80"/>
+                        </ThicknessAnimationUsingKeyFrames>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+
+    </Window.Triggers>
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Name="ButtonA" Content="A" HorizontalAlignment="Left" Style="{StaticResource ButtonStyle}"
+                    Margin="10, 0, 0, 0" Opacity="0.0">
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="PreviewMouseLeftButtonUp">
+                        <BeginStoryboard>
+                            <Storyboard>
+
+                                <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="ButtonA" Storyboard.TargetProperty="Margin" BeginTime="00:00:1.5">
+                                    <SplineThicknessKeyFrame KeyTime="0:0:3.5" Value="-900, 0, 0, 0"/>
+                                </ThicknessAnimationUsingKeyFrames>
+
+                                <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="ButtonB" Storyboard.TargetProperty="Margin" BeginTime="00:00:1.5">
+                                    <SplineThicknessKeyFrame KeyTime="0:0:3.5" Value="0, 0, -900, 0"/>
+                                </ThicknessAnimationUsingKeyFrames>
+
+                                <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="ButtonC" Storyboard.TargetProperty="Margin" BeginTime="00:00:1.5">
+                                    <SplineThicknessKeyFrame KeyTime="0:0:3.5" Value="0, 0, 0, -700"/>
+                                </ThicknessAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Button.Triggers>
+                
+            </Button>
+
+            <Button Grid.Column="1" Name="ButtonB" Content="B" HorizontalAlignment="Right" Style="{StaticResource ButtonStyle}"
+                    Margin="0, 0, 10, 0" Opacity="0.0">
+
+                <Button.Triggers>
+                    <EventTrigger RoutedEvent="PreviewMouseLeftButtonUp">
+                        <BeginStoryboard>
+                            <Storyboard>
+
+                                <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="ButtonA" Storyboard.TargetProperty="Margin" BeginTime="00:00:1.5">
+                                    <SplineThicknessKeyFrame KeyTime="0:0:3.5" Value="-900, 0, 0, 0"/>
+                                </ThicknessAnimationUsingKeyFrames>
+
+                                <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="ButtonB" Storyboard.TargetProperty="Margin" BeginTime="00:00:1.5">
+                                    <SplineThicknessKeyFrame KeyTime="0:0:3.5" Value="0, 0, -900, 0"/>
+                                </ThicknessAnimationUsingKeyFrames>
+
+                                <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="ButtonC" Storyboard.TargetProperty="Margin" BeginTime="00:00:1.5">
+                                    <SplineThicknessKeyFrame KeyTime="0:0:3.5" Value="0, 0, 0, -700"/>
+                                </ThicknessAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Button.Triggers>
+                
+            </Button>
+
+        </Grid>
+
+        <Button Grid.Row="1" Name="ButtonC" Content="C" VerticalAlignment="Bottom" Style="{StaticResource ButtonStyle}"
+                Margin="0, 0, 0, 10" Opacity="0.0">
+
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="PreviewMouseLeftButtonUp">
+                    <BeginStoryboard>
+                        <Storyboard>
+
+                            <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="ButtonA" Storyboard.TargetProperty="Margin" BeginTime="00:00:1.5">
+                                <SplineThicknessKeyFrame KeyTime="0:0:3.5" Value="-900, 0, 0, 0"/>
+                            </ThicknessAnimationUsingKeyFrames>
+
+                            <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="ButtonB" Storyboard.TargetProperty="Margin" BeginTime="00:00:1.5">
+                                <SplineThicknessKeyFrame KeyTime="0:0:3.5" Value="0, 0, -900, 0"/>
+                            </ThicknessAnimationUsingKeyFrames>
+
+                            <ThicknessAnimationUsingKeyFrames Storyboard.TargetName="ButtonC" Storyboard.TargetProperty="Margin" BeginTime="00:00:1.5">
+                                <SplineThicknessKeyFrame KeyTime="0:0:3.5" Value="0, 0, 0, -700"/>
+                            </ThicknessAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+
+        </Button>
+
+    </Grid>
+</Window>

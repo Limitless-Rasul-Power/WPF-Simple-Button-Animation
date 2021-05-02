@@ -1,0 +1,17 @@
+C:\Users\Admin\source\repos\WPF Button Animation\WPF Button Animation\bin\Debug\WPF Button Animation.exe.config
+C:\Users\Admin\source\repos\WPF Button Animation\WPF Button Animation\bin\Debug\WPF Button Animation.exe
+C:\Users\Admin\source\repos\WPF Button Animation\WPF Button Animation\bin\Debug\WPF Button Animation.pdb
+C:\Users\Admin\source\repos\WPF Button Animation\WPF Button Animation\obj\Debug\WPF Button Animation.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\WPF Button Animation\WPF Button Animation\obj\Debug\MainWindow.g.cs
+C:\Users\Admin\source\repos\WPF Button Animation\WPF Button Animation\obj\Debug\App.g.cs
+C:\Users\Admin\source\repos\WPF Button Animation\WPF Button Animation\obj\Debug\WPF Button Animation_MarkupCompile.cache
+C:\Users\Admin\source\repos\WPF Button Animation\WPF Button Animation\obj\Debug\WPF Button Animation_MarkupCompile.lref
+C:\Users\Admin\source\repos\WPF Button Animation\WPF Button Animation\obj\Debug\MainWindow.baml
+C:\Users\Admin\source\repos\WPF Button Animation\WPF Button Animation\obj\Debug\WPF Button Animation.g.resources
+C:\Users\Admin\source\repos\WPF Button Animation\WPF Button Animation\obj\Debug\WPF_Button_Animation.Properties.Resources.resources
+C:\Users\Admin\source\repos\WPF Button Animation\WPF Button Animation\obj\Debug\WPF Button Animation.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\WPF Button Animation\WPF Button Animation\obj\Debug\WPF Button Animation.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\WPF Button Animation\WPF Button Animation\obj\Debug\WPF Button Animation.exe
+C:\Users\Admin\source\repos\WPF Button Animation\WPF Button Animation\obj\Debug\WPF Button Animation.pdb
+C:\Users\Admin\source\repos\WPF Button Animation\WPF Button Animation\obj\Debug\Dictionaries\ButtonsDictionary.baml
+C:\Users\Admin\source\repos\WPF Button Animation\WPF Button Animation\obj\Debug\App.baml
